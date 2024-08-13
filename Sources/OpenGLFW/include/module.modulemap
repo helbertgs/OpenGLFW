@@ -1,4 +1,4 @@
-module GLFW [system] {
+module OpenGLFW [system] {
     header "glfw3.h"
     header "glfw3native.h"
     
