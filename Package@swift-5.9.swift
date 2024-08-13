@@ -51,17 +51,17 @@ sources += [
 #endif
 
 let package = Package(
-    name: "GLFW",
+    name: "OpenGLFW",
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "GLFW",
-            targets: ["GLFW"]
+            name: "OpenGLFW",
+            targets: ["OpenGLFW"]
         )
     ],
     targets: [
         .target(
-            name: "GLFW",
+            name: "OpenGLFW",
             sources: sources,
             cSettings: [
                 .unsafeFlags(["-fno-objc-arc"], .when(platforms: [.macOS])),
