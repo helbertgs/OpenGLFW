@@ -1,0 +1,6 @@
+module GLFW [system] {
+    header "glfw3.h"
+    header "glfw3native.h"
+    
+    export *
+}
