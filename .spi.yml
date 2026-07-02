@@ -1,0 +1,22 @@
+version: 1
+builder:
+  configs:
+    - platform: macos
+      scheme: OpenGLFW
+      target: OpenGLFW
+      swift_version: 6.0
+
+    - platform: linux
+      scheme: OpenGLFW
+      target: OpenGLFW
+      swift_version: 6.0
+
+    - platform: windows
+      scheme: OpenGLFW
+      target: OpenGLFW
+      swift_version: 6.0
+metadata:
+  authors: "Helbert Gomes, Mariana Rios Silveira Carvalho"
+email_addresses:
+  Helbert Gomes <hellbert.gomes@gmail.com>
+  Mariana Rios Silveira Carvalho <marianariossc@gmail.com>

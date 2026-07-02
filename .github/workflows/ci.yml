@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    name: Build and Test (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - macos-latest
+          - ubuntu-latest
+          - windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Swift (Windows only)
+        if: matrix.os == 'windows-latest'
+        uses: compnerd/gha-setup-swift@main
+        with:
+          swift-version: swift-6.3.2-release
+          swift-build: 6.3.2-RELEASE
+
+      - name: Swift version
+        run: swift --version
+
+      - name: Build
+        run: swift build -c debug
